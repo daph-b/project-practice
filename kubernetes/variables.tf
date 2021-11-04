@@ -6,11 +6,23 @@ variable "region" {
   type = string
 }
 
+variable "cluster_name" {
+  type = string  
+}
+
+variable "cluster_zone" {
+  type = stirng
+}
+
+variable "db_instance" {
+  type = string
+}
+
 variable "namespace" {
   type        = string
   description = "namespace where the kubernetes objects will be created"
 }
-/*
+
 variable "db_user" {
   type        = string
   description = "user of the database instance for the kubernetes application passed from the db module"
@@ -26,7 +38,6 @@ variable "db" {
   type        = string
   description = "name of database to connect to"
 }
-*/
 
 variable "db_host" {
   type        = string
