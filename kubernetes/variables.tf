@@ -6,15 +6,6 @@ variable "region" {
   type = string
 }
 
-variable "cluster_name" {
-  type = string  
-}
-
-variable "cluster_zone" {
-  type = string
-}
-
-
 variable "namespace" {
   type        = string
   description = "namespace where the kubernetes objects will be created"
