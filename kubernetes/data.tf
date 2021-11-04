@@ -24,7 +24,7 @@ data "google_storage_bucket_object_content" "db" {
 }
 
 // get the name of the sql instance from a cloud storage bucket
-data "google_storage_bucket_object_content" "db_conncetion" {
+data "google_storage_bucket_object_content" "db_connection" {
   name   = "connection-name"
   bucket = "sca-project"
 }
