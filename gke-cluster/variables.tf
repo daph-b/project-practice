@@ -37,7 +37,7 @@ variable "cluster_zone" {
 
 variable "master_version" {
   type = string 
-  default = "1.20.10-gke.301"
+  default = "1.20.10-gke.1600"
   description = "cluster master version"
 }
 
