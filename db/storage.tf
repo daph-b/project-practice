@@ -1,6 +1,6 @@
-resource "google_storage_bucket_object" "db_instance" {
-  name   = "db_instance"
-  content = "${google_sql_database_instance.primary.name}"
+resource "google_storage_bucket_object" "db_connection" {
+  name   = "connection-name"
+  content = "${google_sql_database_instance.primary.connection_name}"
   bucket = "sca-project"
 }
 
