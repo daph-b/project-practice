@@ -41,7 +41,5 @@ data "google_storage_bucket_object_content" "db_pass" {
   bucket = "sca-project"
 }
 
-output "encrypted" {
-  value = data.google_storage_bucket_object_content.key.content
-}
+
 
