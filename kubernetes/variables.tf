@@ -11,7 +11,7 @@ variable "cluster_name" {
 }
 
 variable "cluster_zone" {
-  type = stirng
+  type = string
 }
 
 variable "db_instance" {
