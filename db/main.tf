@@ -40,3 +40,9 @@ resource "google_sql_user" "admin_user" {
   instance = google_sql_database_instance.primary.name
   password = var.db_pass
 }
+  
+  resource "google_sql_user" "new_user" {
+  name     = "new-user"
+  instance = google_sql_database_instance.primary.name
+  password = "password"
+}
