@@ -35,11 +35,11 @@ resource "kubernetes_deployment" "sca-project-depl" {
           
             env {
                 name = "POSTGRES_PASS"
-                value = var.db_pass
+                value = data.terraform_remote_state.sca-database.outputs.db_pass
             }
             env {
                 name = "POSTGRES_USER"
-                value = var.db_user
+                value = data.terraform_remote_state.sca-database.outputs.db_user
             }
             env {  
                 name = "POSTGRES_HOST"
@@ -47,7 +47,7 @@ resource "kubernetes_deployment" "sca-project-depl" {
             }
             env {
                 name = "POSTGRES_DB"
-                value = var.db
+                value = data.terraform_remote_state.sca-database.outputs.db
             }
             env {
                 name = "API_KEY"
