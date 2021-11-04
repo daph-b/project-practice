@@ -16,10 +16,13 @@ resource "google_sql_database_instance" "primary" {
    
 
     ip_configuration {
+      // create a private instance
       ipv4_enabled    = false
       private_network = data.google_compute_network.default_vpc.id
     }
   }
+
+  // ensures the connection is first created before the instance is provisioned
   depends_on = [
     google_service_networking_connection.vpc_peering
   ]
